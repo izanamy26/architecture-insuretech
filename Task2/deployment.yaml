@@ -13,8 +13,10 @@ spec:
         app: scaletestapp
     spec:
       containers:
-      - name: scaletestapp
-        image: shestera/scaletestapp
-        resources:
-          limits:
-            memory: "30Mi"
+        - name: scaletestapp
+          image: shestera/scaletestapp
+          resources:
+            requests:
+              memory: "10Mi"
+            limits:
+              memory: "20Mi"
